@@ -9,7 +9,7 @@ Requirements
 
 ## Installation and Usage
 
-```shell
+```cmd
     Clone the repository and install the dependencies:
 ```
 
@@ -39,15 +39,15 @@ $ python manage.py createsuperuser
 $ python manage.py runserver
 ```
 
-    Visit http://localhost:8000/admin/ to log in to the admin site using the superuser credentials you created.
+Visit `http://localhost:8000/admin/` to log in to the admin site using the superuser credentials you created.
 
 To make reservations or check availability using the REST API, you can use tools like curl or Postman to send requests to the appropriate endpoints:
 
-    To make a reservation: POST /api/reservations/
+To make a reservation: POST /api/reservations/
 
-    Example request body:
+Example request body:
 
-    ```json
+```json
 
 {
     "name": "John Doe",
@@ -69,15 +69,15 @@ Example request URL:
     http://localhost:8000/api/reservations/available/?listing_id=1&start_time=2023-03-02T10:00:00Z&end_time=2023-03-04T12:00:00Z
 ```
 
-    where listing_id is the ID of the listing being checked, and start_time and end_time are the start and end times of the reservation being checked.
+where listing_id is the ID of the listing being checked, and start_time and end_time are the start and end times of the reservation being checked.
 
-    To view the booked rooms report, visit http://localhost:8000/api/reservations/report/ and enter the listing_id of the specific list you want to view or without input to see all reservations.
+To view the booked rooms report, visit `http://localhost:8000/api/reservations/report/` and enter the listing_id of the specific list you want to view or without input to see all reservations.
 
 ## Running with Docker
 
 You can also run the application with Docker.
 
-    Clone the repository:
+Clone the repository:
 
 ```shell
 
@@ -85,20 +85,21 @@ $ git clone https://github.com/username/reservation-system.git
 $ cd reservation-system/
 ```
 
-    Build the Docker image:
+Build the Docker image:
 
 ```cmd
 
 $ docker build -t reservation-system .
 ```
-    Start a Docker container:
+
+Start a Docker container:
 
 ```cmd
 
 $ docker run -p 8000:8000 reservation-system
 ```
 
-    Follow steps 5 and 6 in the Installation and Usage section above to use the application.
+Follow steps 5 and 6 in the Installation and Usage section above to use the application.
 
 ## Running on Linux or Windows
 
