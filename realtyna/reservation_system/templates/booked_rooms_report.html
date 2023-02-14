@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booked Rooms Report</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Booked Rooms Report</h1>
+    {% if reservations %}
+      <table>
+        <thead>
+          <tr>
+            <th>Room Number</th>
+            <th>Name</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Listing ID</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for reservation in reservations %}
+            <tr>
+              <td>{{ reservation.id }}</td>
+              <td>{{ reservation.name }}</td>
+              <td>{{ reservation.start_time }}</td>
+              <td>{{ reservation.end_time }}</td>
+              <td>{{ reservation.listing.id }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No rooms have been booked yet.</p>
+    {% endif %}
+  </body>
+</html>
