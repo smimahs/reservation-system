@@ -9,9 +9,8 @@ Requirements
 
 ## Installation and Usage
 
-```cmd
-    Clone the repository and install the dependencies:
-```
+Clone the repository and install the dependencies:
+
 
 ```cmd
 $ git clone https://github.com/username/reservation-system.git
@@ -64,10 +63,7 @@ To check availability: GET /api/reservations/available/
 
 Example request URL:
 
-```cmd
-
-    http://localhost:8000/api/reservations/available/?listing_id=1&start_time=2023-03-02T10:00:00Z&end_time=2023-03-04T12:00:00Z
-```
+`http://localhost:8000/api/reservations/available/?listing_id=1&start_time=2023-03-02T10:00:00Z&end_time=2023-03-04T12:00:00Z`
 
 where listing_id is the ID of the listing being checked, and start_time and end_time are the start and end times of the reservation being checked.
 
