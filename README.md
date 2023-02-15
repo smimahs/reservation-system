@@ -49,7 +49,7 @@ Example request body:
 ```json
 
 {
-    "name": "John Doe",
+    "name": "Shamim",
     "start_time": "2023-03-01T10:00:00Z",
     "end_time": "2023-03-03T12:00:00Z",
     "listing": 1
